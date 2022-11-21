@@ -93,8 +93,13 @@
                     placeholder="Enter text"></textarea>
                 </div>
                 <div class="form-element">
-                  <label for="agreement">I agree with mailing and accept <a href="#">terms of agreement</a>
-                    <input type="checkbox" name="agreement" id="agreement"></label>
+
+                  <label class="form-checkbox">I agree with mailing and accept <a href="#">Terms of agreement</a>
+                    <input type="checkbox" name="agreement" class="checkbox-hidden">
+                    <svg class="checkbox-icon">
+                      <use href="images/icons.svg#icon-check_c"></use>
+                    </svg>
+                  </label>
                 </div>
                 <button class="button" type="submit">Send</button>
               </form>

@@ -776,3 +776,29 @@ header .contacts {
 .form-element:nth-last-child(2) {
   margin-bottom: 30px;
 }
+.form-checkbox {
+  position: relative;
+  display: block;
+}
+.form-checkbox a {
+  color:var(--brand-color);
+}
+.checkbox-hidden {
+  appearance: none;
+  position:absolute;
+}
+.checkbox-icon {
+  width:16px;
+  height:15px;
+  border: 2px solid var(--black-color);
+  border-radius: 2px;
+  position:absolute;
+  top:0;
+  left:12px;
+  fill:currentColor;
+  transition: var(--border-transition), var(--background-transition);
+}
+.checkbox-hidden:checked + .checkbox-icon {
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+}
