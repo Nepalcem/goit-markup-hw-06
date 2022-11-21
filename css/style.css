@@ -644,7 +644,6 @@ header .contacts {
   height: 581px;
   background-color: white;
   border-radius: 4px;
-  padding: 8px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: var(--transform-transition);
 }
@@ -653,12 +652,18 @@ header .contacts {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 4px 8px;
-  float: right;
+  position: absolute;
+  right:8px;
+  top:8px;
 }
 
 .close {
   width:11px;
   height: 11px;
+  fill:currentColor;
+}
+.modal-close:hover {
+  color: var(--brand-color);
 }
 
 /* footer form styling */
@@ -695,4 +700,79 @@ header .contacts {
 }
 .icon-text {
   margin-right: 10px;
+}
+
+/*modal form content */
+.innermodal {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23/20);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+.form-label {
+  text-align: left;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: calc(14/12);
+  letter-spacing: 0.01em;
+  color:var(--grey-color);
+}
+.form-input {
+  display: block;
+}
+.form-element {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.input-field {
+  padding: 11px 12px 11px 42px;
+  outline: none;
+  border:1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: var(--border-transition);
+}
+.form-element .message {
+ padding: 12px 16px;
+}
+.input-field:focus {
+  border-color: var(--brand-color);
+}
+.message {
+  resize: none;
+}
+.message::placeholder {
+  font-size: 12px;
+  line-height: calc(14/12);
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.input-icon {
+  width:18px;
+  height: 18px;
+  position: absolute;
+  top:30px;
+  left:12px;
+  fill:currentColor;
+  transition: var(--color-transition);
+}
+.input-field:focus + .input-icon {
+  color:var(--brand-color);
+}
+.text-input {
+  margin-bottom: 20px;
+}
+.form-element:nth-last-child(2) {
+  margin-bottom: 30px;
 }
