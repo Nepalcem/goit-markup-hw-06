@@ -160,10 +160,7 @@ footer {
 .footer-contacts a:focus {
   color: var(--brand-color);
 }
-.footer-column {
-  flex-direction: column;
-  padding: 60px 0 60px 0;
-}
+
 .footer-column .logo {
   display: inline-block;
   margin-bottom: 20px;
@@ -179,7 +176,9 @@ footer {
 }
 .footer {
   display: flex;
+  align-items: baseline;
   gap: 70px;
+  padding: 60px 0;
 }
 .footer-social h3, .footer-form h3 {
   color: white;
@@ -596,11 +595,6 @@ header .contacts {
 .regular-clients {
   padding-top: 94px;
 }
-.footer-social {
-  flex-direction: column;
-  padding: 72px 0 60px 0;
-}
-
 .footer-social .member-social {
   gap: 10px;
 }
@@ -655,6 +649,7 @@ header .contacts {
   position: absolute;
   right:8px;
   top:8px;
+  cursor: pointer;
 }
 
 .close {
@@ -667,9 +662,7 @@ header .contacts {
 }
 
 /* footer form styling */
-.footer-form {
-  padding: 72px 0px;
-}
+
 .footer-form input {
   width: 358px;
   height: 50px;
@@ -700,6 +693,9 @@ header .contacts {
 }
 .icon-text {
   margin-right: 10px;
+}
+.subscription {
+  display: flex;
 }
 
 /*modal form content */
